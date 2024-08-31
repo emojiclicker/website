@@ -21,7 +21,9 @@
 				height: 100%;
 				display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 20px;
 				font-family: "Roboto", sans-serif;
+				background-color: #191919;
 				background-image: url("/background.png");
+				background-repeat: repeat;
 				background-size: contain;
 				color: #fff;
 				margin: 0;
@@ -52,6 +54,17 @@
 				width: 30px; height: 30px;
 			}
 		</style>
+
+		<script>
+			let anim = 0;
+			let last_time = Date.now();
+			setInterval(() => {
+				const time = Date.now();
+				anim += Math.min(Date.now() - last_time, 100) / 250;
+				last_time = time;
+				document.body.style.backgroundPosition = `${anim}px ${anim}px`;
+			}, 0);
+		</script>
 	</head>
 	<body>
 		<div id="header">
