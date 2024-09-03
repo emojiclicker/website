@@ -38,6 +38,10 @@
 				box-sizing: border-box;
 			}
 
+			#steam-widget {
+				max-width: calc(100% - 30px);
+			}
+
 			#copyright {
 				display: flex; justify-content: center; align-items: center;
 				position: absolute; left: 0; bottom: 0;
@@ -73,7 +77,7 @@
 				Emoji Clicker
 			</div>
 		</div>
-		<iframe src="https://store.steampowered.com/widget/3056880" frameborder="0" width="646" height="190"></iframe>
+		<iframe id="steam-widget" src="https://store.steampowered.com/widget/3056880" frameborder="0" width="646" height="190"></iframe>
 		<div id="copyright">© 2024 jgraj. All Rights Reserved.</div>
 	</body>
 </html>
